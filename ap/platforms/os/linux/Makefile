@@ -45,6 +45,8 @@ ETH_SUPPORT ?= n
 
 #Enable debugging for easier symbol fetching
 DEBUG ?= y
+
+STRIP ?= y
 ##
 ##
 ## File lists and locations
@@ -335,6 +337,7 @@ $(OS_LINUX):
 #
 $(OUTPUT_FILE): $(DRIVER_LIB) $(OS_COMMON) $(OS_LINUX)
 	mv $(OS_LINUX) $(OUTPUT_FILE)
+	cd $(OUTPUT_DIR) && $(CROSS_COMPILE)strip --strip-unneeded tiap_drv.ko
 
 .PHONY: link
 link:

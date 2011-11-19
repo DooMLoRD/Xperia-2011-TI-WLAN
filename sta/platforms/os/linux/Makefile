@@ -63,6 +63,7 @@ ETH_SUPPORT ?= n
 #
 DEBUG ?= y
 
+STRIP ?= y
 ##
 ##
 ## File lists and locations
