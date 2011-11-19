@@ -42,6 +42,7 @@
 #ifndef __HOST_PLATFORM_SDIO__H__
 #define __HOST_PLATFORM_SDIO__H__
 
+#include <linux/version.h>
 #include <mach/hardware.h>
 #include <mach/irqs.h>
 

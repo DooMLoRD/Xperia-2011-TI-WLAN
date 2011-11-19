@@ -31,6 +31,7 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#include "linux/version.h"
 #include "tidef.h"
 #include <linux/kernel.h>
 #include <asm/io.h>

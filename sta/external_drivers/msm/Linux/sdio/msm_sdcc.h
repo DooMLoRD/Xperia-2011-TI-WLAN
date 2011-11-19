@@ -9,6 +9,7 @@
  *
  * - Based on mmci.h
  */
+#include <linux/version.h>
 
 #ifndef _MSM_SDCC_H
 #define _MSM_SDCC_H

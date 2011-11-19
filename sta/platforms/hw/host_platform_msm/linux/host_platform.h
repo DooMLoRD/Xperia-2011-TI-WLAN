@@ -44,6 +44,7 @@
 
 #include <mach/hardware.h>
 #include <mach/irqs.h>
+#include <linux/version.h>
 
 /* TODO: Platform specific constant */
 /* This is extremely ugly but will do for the bringup */
