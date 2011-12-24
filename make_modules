@@ -1,0 +1,25 @@
+export ARCH=arm 
+export CROSS_COMPILE=/home/doomlord/android/system/prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin/arm-eabi- 
+export KLIB=/home/doomlord/4.1.C.0.6/kernel 
+export KLIB_BUILD=$KLIB
+cd compat-wireless-wl12xx/
+./scripts/driver-select wl12xx
+make
+cp ./net/wireless/cfg80211.ko ../out/.
+cp ./net/mac80211/mac80211.ko ../out/.
+cp ./compat/compat.ko ../out/.
+cp ./compat/compat_firmware_class.ko ../out/.
+cp ./drivers/net/wireless/wl12xx/wl12xx.ko ../out/.
+cp ./drivers/net/wireless/wl12xx/wl12xx_sdio.ko ../out/.
+cp ./drivers/net/wireless/wl12xx/wl12xx_spi.ko ../out/.
+make clean
+cd ..
+#cd out
+#$CROSS_COMPILEstrip --strip-debug cfg80211.ko
+#$CROSS_COMPILEstrip --strip-debug mac80211.ko
+#$CROSS_COMPILEstrip --strip-debug compat.ko
+#$CROSS_COMPILEstrip --strip-debug compat_firmware_class.ko
+#$CROSS_COMPILEstrip --strip-debug wl12xx.ko
+#$CROSS_COMPILEstrip --strip-debug wl12xx_sdio.ko
+#$CROSS_COMPILEstrip --strip-debug wl12xx_spi.ko
+#cd ..
