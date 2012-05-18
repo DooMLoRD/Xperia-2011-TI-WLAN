@@ -1,6 +1,6 @@
 export ARCH=arm 
 export CROSS_COMPILE=/home/doomlord/android/system/prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin/arm-eabi- 
-export KLIB=/home/doomlord/4.1.C.0.6/kernel 
+export KLIB=/home/doomlord/xperia-2011-doomkernel-sources-working-dir/Xperia-2011-Kernel-2.6.32.9/kernel 
 export KLIB_BUILD=$KLIB
 cd compat-wireless-wl12xx/
 ./scripts/driver-select wl12xx
